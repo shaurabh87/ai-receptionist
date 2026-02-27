@@ -1,0 +1,26 @@
+# 🏥 Clinic AI Receptionist — Python Dependencies
+# Install all: pip install -r requirements.txt
+
+# ── Core UI ──────────────────────────
+streamlit>=1.32.0
+pandas>=2.0.0
+
+# ── LLM Providers (install based on your choice) ──
+# For Ollama (local, free):
+ollama>=0.1.7
+
+# For Groq (free cloud API):
+groq>=0.4.0
+
+# For Google Gemini (free cloud API):
+google-generativeai>=0.4.0
+
+# ── WhatsApp Bot ──────────────────────
+flask>=3.0.0
+requests>=2.31.0
+
+# ── Email Reminders ───────────────────
+# Uses Python built-in smtplib — no extra install needed!
+
+# ── Database ──────────────────────────
+# Uses Python built-in sqlite3 — no extra install needed!
