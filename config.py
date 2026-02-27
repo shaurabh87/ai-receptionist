@@ -1,9 +1,3 @@
-import streamlit as st
-import os
-
-# Reads secret from Streamlit Cloud (or local secrets.toml)
-GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY", ""))
-
 """
 ⚙️  config.py — Edit ALL your clinic settings here
 """
@@ -20,7 +14,10 @@ LLM_PROVIDER   = "groq"          # Change to "groq" or "gemini"
 OLLAMA_MODEL   = "llama3"          # After: ollama pull llama3
                                    # Other options: mistral, phi3, gemma
 
-GROQ_API_KEY   = ""                # Paste your free Groq API key here
+import streamlit as st
+import os
+
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY", ""))               # Paste your free Groq API key here
 GROQ_MODEL     = "llama-3.1-8b-instant"  # Free model on Groq
 
 GEMINI_API_KEY = ""                # Paste your free Gemini API key here
